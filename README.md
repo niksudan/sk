@@ -1,3 +1,5 @@
+<img src="http://i.imgur.com/gagL1bk.png" alt="Game Maker skeleton system" width="500px" title="Credit to Michael Blue" />
+
 sk
 ==
 
@@ -70,3 +72,5 @@ Draw whatever you want on these, I won't hold you back.
 ![Demo](http://i.imgur.com/iT6KS7U.gif)
 
 ![Demo](http://i.imgur.com/89flKEe.gif)
+
+*Credit to Michael Blue for image right at the top*

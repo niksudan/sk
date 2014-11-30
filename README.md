@@ -3,7 +3,7 @@
 sk
 ==
 
-sk is an easy to use skeletal system for [Game Maker](http://yoyogames.com) Language.
+sk is an easy to use skeletal system for [Game Maker](http://yoyogames.com) Language by Nik Sudan. Please give credit when used, that's all I ask of you!
 
 ![Demo](http://i.imgur.com/twQfr0Q.gif)
 

@@ -1,9 +1,12 @@
-<img src="http://i.imgur.com/gagL1bk.png" alt="Game Maker skeleton system" width="500px" title="Credit to Michael Blue" />
+<p align="center">
+    <img src="http://i.imgur.com/gagL1bk.png" alt="Game Maker skeleton system" width="350" title="Credit to Michael Blue" />
+</a>
 
-sk
-==
+<h1 align="center">sk</h1>
 
 sk is an easy to use skeletal system for [Game Maker](http://yoyogames.com) Language by Nik Sudan. Please give credit when used, that's all I ask of you!
+
+Massive thanks to [Michael Savchuk](https://twitter.com/ThePixelRobin) for the sk icon!
 
 ![Demo](http://i.imgur.com/twQfr0Q.gif)
 
@@ -72,5 +75,3 @@ Draw whatever you want on these, I won't hold you back.
 ![Demo](http://i.imgur.com/iT6KS7U.gif)
 
 ![Demo](http://i.imgur.com/89flKEe.gif)
-
-*Credit to Michael Blue for image right at the top*

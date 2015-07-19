@@ -12,11 +12,9 @@ Massive thanks to [Michael Savchuk](https://twitter.com/ThePixelRobin) for the s
 
 ## Creating Skeletons
 
-You cannot define a skeleton within Game Maker, sk loads in skeletons externally, using .sk files. These are structured like .ini files, and contain information about each joint's properties. A GUI for creating skeletons is available and will be for sale on the [Game Maker Marketplace](http://marketplace.yoyogames.com) **soon**.
+You cannot define a skeleton within Game Maker, sk loads in skeletons externally, using .sk files. These are structured like .ini files, and contain information about each joint's properties. [A GUI for creating skeletons is available on itch.io for a very small fee for Windows only](http://nik.itch.io/sk-creator).
 
 ![GUI](http://i.imgur.com/ktp9Kwz.png)
-
-The GUI will be available soon.
 
 ## Setting Up The Skeleton
 

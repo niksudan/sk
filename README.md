@@ -46,7 +46,7 @@ The angle the skeleton is imported in at will be the zero value for <code>angle<
 
 You can then set the rotation speed of the joint with the following function:
 
-    sk_setRotatonSpeed( jointID, speed );
+    sk_setRotationSpeed( jointID, speed );
 
 The bigger the <code>speed</code> is, the faster it'll move (duh).
 

@@ -290,6 +290,10 @@ ypar = sk_getY(par);
 curAng = sk_getAngle(point);
 parAng = sk_getAngle(par);
 
+if (is_undefined(parAng)) {
+    parAng = 0;
+}
+
 sk_setAngle(point,sk_rotate(curAng,sk_getTargetAngle(point)+parAng,sk_getRotationSpeed(point)));
 
 if point != 0 {

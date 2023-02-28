@@ -1,5 +1,6 @@
-#define nearestPoint
-///nearestPoint(x, y)
+
+function nearestPoint()
+{
 //x,y
 near = 0;
 for (i=0; i<ds_list_find_value(data,1); i+=1) {
@@ -7,9 +8,11 @@ for (i=0; i<ds_list_find_value(data,1); i+=1) {
         near = i;
 }
 return near;
+}
 
-#define pointDirection
-///pointDirection(x1, y1, x2, y2)
+function pointDirection()
+{
+
 /*
 
 argument0   x1
@@ -19,10 +22,9 @@ argument3   y2
 
 */
 return ((((arctan2(argument0-argument2,argument1-argument3)* (180/pi))) + 450) mod 360);
-
-#define sk_create
-///sk_create(data)
-
+}
+function sk_create()
+{
 /***************************************************
   Create Skeleton Structure
  ***************************************************
@@ -73,10 +75,9 @@ if iData != -1 {
         sk_updateJoint(i);
     }
 }
-
-#define sk_draw
-///sk_draw()
-
+}
+function sk_draw()
+{
 /***************************************************
   Draw Skeleton
  ***************************************************
@@ -98,41 +99,59 @@ for (i=0; i<ds_grid_width(SK_DATA); i+=1) {
         draw_line(xval,yval,sk_getX(par),sk_getY(par));
     }
 }
-
-#define sk_getAngle
+}
+function sk_getAngle()
+{
 return ds_grid_get(SK_DATA,argument0,5);
+}
 
-#define sk_getClampMax
+function sk_getClampMax()
+{
 return ds_grid_get(SK_DATA,argument0,9);
+}
 
-#define sk_getClampMin
+function sk_getClampMin()
+{
 return ds_grid_get(SK_DATA,argument0,8);
+}
 
-#define sk_getParent
+function sk_getParent()
+{
 return ds_grid_get(SK_DATA,argument0,0);
+}
 
-#define sk_getRotationSpeed
+function sk_getRotationSpeed()
+{
 return ds_grid_get(SK_DATA,argument0,7);
+}
 
-#define sk_getTargetAngle
+function sk_getTargetAngle()
+{
 return ds_grid_get(SK_DATA,argument0,6);
+}
 
-#define sk_getX
+function sk_getX()
+{
 return ds_grid_get(SK_DATA,argument0,1);
+}
 
-#define sk_getXOffset
+function sk_getXOffset()
+{
 return ds_grid_get(SK_DATA,argument0,3);
+}
 
-#define sk_getY
+function sk_getY()
+{
 return ds_grid_get(SK_DATA,argument0,2);
+}
 
-#define sk_getYOffset
+function sk_getYOffset()
+{	
 return ds_grid_get(SK_DATA,argument0,4);
+}
 
-#define sk_import
-///sk_import(filename)
-
-
+function sk_import()
+{
 /***************************************************
   Import Skeleton Data
  ***************************************************
@@ -191,64 +210,77 @@ if file_exists(argument0) {
     show_message("Error - Could not open skeleton file "+argument0);
     return -1;
 }
-
-#define sk_pointX
-///sk_pointX(parent x, x offset, y offset, angle)
+}
+function sk_pointX()
+{
+// sk_pointX(parent x, x offset, y offset, angle)
 return ((argument1*cos(degtorad(-argument3)))-(argument2*sin(degtorad(-argument3))))+argument0;
+}
 
-#define sk_pointY
-///sk_pointY(parent y, x offset, y offset, angle)
+function sk_pointY()
+{
+//sk_pointY(parent y, x offset, y offset, angle)
 return ((argument1*sin(degtorad(-argument3)))+(argument2*cos(degtorad(-argument3))))+argument0;
+}
 
-#define sk_rotate
-///sk_rotate(angle, target, speed)
-
+function sk_rotate()
+{
 //angle = sk_rotate(angle,target angle,speed)
 return (argument0+(sin(degtorad((argument1)-argument0))*argument2));
+}
 
-#define sk_setAngle
-///sk_setAngle(id, angle)
+function sk_setAngle()
+{
 ds_grid_set(SK_DATA,argument0,5,argument1);
+}
 
-#define sk_setClampMax
-///sk_setClampMax(id, clampMax)
+function sk_setClampMax()
+{
 ds_grid_set(SK_DATA,argument0,9,argument1);
+}
 
-#define sk_setClampMin
-///sk_setClampMin(id, clampMin)
+function sk_setClampMin()
+{
 ds_grid_set(SK_DATA,argument0,8,argument1);
+}
 
-#define sk_setParent
-///sk_setParent(id, parentId)
+function sk_setParent()
+{
 ds_grid_set(SK_DATA,argument0,0,argument1);
+}
 
-#define sk_setRotationSpeed
-///sk_setRotationSpeed(id, rotationSpeed)
+function sk_setRotationSpeed()
+{
 ds_grid_set(SK_DATA,argument0,7,argument1);
+}
 
-#define sk_setTargetAngle
-///sk_setTargetAngle(id, targetAngle)
+function sk_setTargetAngle()
+{
 ds_grid_set(SK_DATA,argument0,6,argument1);
+}
 
-#define sk_setX
-///sk_setX(id, x)
+function sk_setX()
+{
 ds_grid_set(SK_DATA,argument0,1,argument1);
+}
 
-#define sk_setXOffset
-///sk_setXOffset(id, xOffset)
+function sk_setXOffset()
+{
 ds_grid_set(SK_DATA,argument0,3,argument1);
+}
 
-#define sk_setY
-///sk_setY(id, y)
+function sk_setY()
+{
 ds_grid_set(SK_DATA,argument0,2,argument1);
+}
 
-#define sk_setYOffset
-///sk_setYOffset(id, yOffset)
+function sk_setYOffset()
+{
 ds_grid_set(SK_DATA,argument0,4,argument1);
+}
 
-#define sk_update
-///sk_update()
-
+function sk_update()
+{
 /***************************************************
   Update Skeleton Structure
  ***************************************************
@@ -265,10 +297,10 @@ sk_setY(0,y);
 for (i=0; i<ds_grid_width(SK_DATA); i+=1) {
     sk_updateJoint(i);
 }
+}
 
-#define sk_updateJoint
-///sk_updateJoint(id)
-
+function sk_updateJoint()
+{
 /***************************************************
   Update a Joint
  ***************************************************
@@ -290,10 +322,6 @@ ypar = sk_getY(par);
 curAng = sk_getAngle(point);
 parAng = sk_getAngle(par);
 
-if (is_undefined(parAng)) {
-    parAng = 0;
-}
-
 sk_setAngle(point,sk_rotate(curAng,sk_getTargetAngle(point)+parAng,sk_getRotationSpeed(point)));
 
 if point != 0 {
@@ -303,4 +331,5 @@ if point != 0 {
 } else {
     sk_setX(0,x);
     sk_setY(0,y);
+}
 }
